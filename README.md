@@ -1,6 +1,7 @@
 # TMDB元数据导出工具
 
 这是一个用于从 [The Movie Database (TMDB)](https://www.themoviedb.org/) 导出电影、剧集和合集元数据的 Python 脚本工具。它能够根据指定的模板格式导出 JSON 文件，支持多种高级功能，包括季合并、季号重映射和指数退避重试机制。
+模版格式按照神医助手PRO说明
 
 ---
 
@@ -221,6 +222,116 @@ python tmdb_export.py 3427 your_api_key ./output --type tv --combine-seasons --s
 - 建议使用新的输出目录以避免冲突
 
 ---
+
+## 输出 JSON 模板示例
+
+### 🎬 电影 `all.json`
+```json
+{
+  "id": 123456789,
+  "imdb_id": "",
+  "title": "test movie",
+  "original_title": "",
+  "overview": "test movie overview",
+  "tagline": "",
+  "release_date": "",
+  "vote_average": 0.0,
+  "production_countries": [],
+  "production_companies": [],
+  "genres": [],
+  "casts": {
+    "cast": [],
+    "crew": []
+  },
+  "releases": {
+    "countries": []
+  },
+  "belongs_to_collection": null,
+  "trailers": {
+    "youtube": []
+  }
+}
+```
+
+### 📺 节目 `series.json`
+```json
+{
+  "id": 123456789,
+  "name": "test series",
+  "original_name": "",
+  "overview": "test series overview",
+  "vote_average": 0.0,
+  "episode_run_time": [],
+  "first_air_date": "1970-01-01T00:00:00.000Z",
+  "last_air_date": "1970-01-01T00:00:00.000Z",
+  "status": "",
+  "networks": [],
+  "genres": [],
+  "external_ids": {
+    "imdb_id": "",
+    "tvrage_id": null,
+    "tvdb_id": null
+  },
+  "videos": {
+    "results": []
+  },
+  "content_ratings": {
+    "results": []
+  },
+  "credits": {
+    "cast": []
+  }
+}
+```
+
+### 📦 季 `season-1.json`
+```json
+{
+  "name": "test season 1",
+  "overview": "test season 1 overview",
+  "air_date": "1970-01-01T00:00:00.000Z",
+  "external_ids": {
+    "tvdb_id": null
+  },
+  "credits": {
+    "cast": [],
+    "crew": []
+  }
+}
+```
+
+### 🎞️ 集 `season-1-episode-1.json`
+```json
+{
+  "name": "test episode 1",
+  "overview": "test episode 1 overview",
+  "videos": {
+    "results": []
+  },
+  "external_ids": {
+    "tvdb_id": null,
+    "tvrage_id": null,
+    "imdb_id": ""
+  },
+  "air_date": "1970-01-01T00:00:00.000Z",
+  "vote_average": 0.0,
+  "credits": {
+    "cast": [],
+    "guest_stars": [],
+    "crew": []
+  }
+}
+```
+
+### 📚 合集 `all.json`
+```json
+{
+  "id": 123456789,
+  "name": "test collection",
+  "overview": ""
+}
+```
+
 
 ## 贡献与支持
 
