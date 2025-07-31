@@ -1,7 +1,7 @@
 这是一个用于媒体管理的实用工具集，包含两个 Python 脚本：
 
 1. `tmdb_export.py`：用于导出 TMDB 元数据（支持剧集整合与多集导出）；
-2. `compare_media.py`：用于比对整理包与媒体库中视频文件的差异。
+2. `compare_media.py`：用于比对目录中视频文件的差异。
 
 ---
 # 📁 脚本一：tmdb_export.py
