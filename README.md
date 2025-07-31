@@ -1,6 +1,6 @@
 这是一个用于媒体管理的实用工具集，包含两个 Python 脚本：
 
-1. `tmdb_export.py`：用于导出 TMDB 元数据（支持剧集整合与多集导出）；
+1. `tmdb_export.py`：用于从 [The Movie Database (TMDB)](https://www.themoviedb.org/) 导出电影、剧集和合集元数据的 Python 脚本工具。它能够根据指定的模板格式导出 JSON 文件，支持多种高级功能，包括季合并、季号重映射和指数退避重试机制。JSON模板按照神医助手PRO说明。导出的JSON用作构建本地元数据刮削源；
 2. `compare_media.py`：用于比对目录中视频文件的差异。
 
 ---
