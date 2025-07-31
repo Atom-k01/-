@@ -8,7 +8,7 @@
 
 ## 🧩 功能介绍
 
-### 1️⃣ tmdb_export.py：TMDB 元数据导出工具
+###  tmdb_export.py：TMDB 元数据导出工具
 
 支持以下功能：
 
@@ -323,7 +323,7 @@ python tmdb_export.py 3427 your_api_key ./output --type tv --combine-seasons --s
 ```
 # 📁 脚本二：compare_media.py
 
-一个用于支持比对两个目录中的视频文件差异的命令行工具。
+一个用于比对两个目录中的视频文件差异的命令行工具。
 
 ## 🧰 功能介绍
 
